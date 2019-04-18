@@ -19,4 +19,9 @@ $ git clone git@github.com:yourname/yourrepository.git
 > 该命令会在当前目录下创建 git 本地仓库，目录名称为仓库名
 >
 
+### git add ###
+
+### git status ###
+
+### git commit ###
 
