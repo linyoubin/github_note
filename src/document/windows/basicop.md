@@ -68,4 +68,3 @@ $ git clone git@github.com:yourname/yourrepository.git
 
    存在冲突时，鼠标右键冲突文件 TortoiseGit-->edit conflicts
 
-### ###
