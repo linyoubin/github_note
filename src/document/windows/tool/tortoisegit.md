@@ -20,4 +20,4 @@
 
 + 验证是否配置成功
 
-  提交一次 github 修改做为验证步骤即可。具体操作参见[基本操作](src/windows/basicop.md)
+  提交一次 github 修改做为验证步骤即可。具体操作参见[基本操作](src/document/windows/basicop.md)
