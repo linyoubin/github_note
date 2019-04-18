@@ -1,7 +1,7 @@
 # 基本操作 #
 
 ## git bash ##
-[git 安装](src/document/windows/tool/git.md)之后自带了 git bash。 git bash 是一个类似于 Linux shell 的命令行窗口。可以方便地使用 git 命令进行项目的 clone, commit 等操作。
+[git 安装](tool/git.md)之后自带了 git bash。 git bash 是一个类似于 Linux shell 的命令行窗口。可以方便地使用 git 命令进行项目的 clone, commit 等操作。
 
 在文件浏览窗口鼠标右键-->Git Bash Here， 打开 git bash。以下命令行命令没有特殊说明的，均是在 git bash 中的操作。
 
@@ -64,7 +64,7 @@ $ git clone git@github.com:yourname/yourrepository.git
 
    在仓库目录内，鼠标右键 TortoiseGit-->Merge，选择从需要合并的源 Branch 
 
-   ![Merge](src/image/windows/basicop_merge.bmp)
+   ![Merge](../../image/windows/basicop_merge.bmp)
 
    存在冲突时，鼠标右键冲突文件 TortoiseGit-->edit conflicts
 
