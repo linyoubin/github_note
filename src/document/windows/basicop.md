@@ -61,10 +61,15 @@ $ git clone git@github.com:yourname/yourrepository.git
 
 + test 分支代码编写完毕后，执行合并提交
 
+   切换回 master 分支
+   ```
+   $ git checkout master
+   ```
+
    在仓库目录内，鼠标右键 TortoiseGit-->Merge，选择从需要合并的源 Branch 
 
    ![Merge][src/image/windows/basicop_merge.bmp]
 
-   存在冲突时，鼠标右键冲突文件 TortoiseGit-->
+   存在冲突时，鼠标右键冲突文件 TortoiseGit-->edit conflicts
 
 ### ###
