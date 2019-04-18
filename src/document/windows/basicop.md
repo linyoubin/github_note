@@ -33,7 +33,8 @@ $ git clone git@github.com:yourname/yourrepository.git
    ```
 
 + 将当前 test 分支回退到某个版本
-   获取 log 
+
+   获取更新 log 
    ``` shell
    $ git log
    commit 1a2db539e6e4966caa8badb044db9d5297f8a800
@@ -49,11 +50,6 @@ $ git clone git@github.com:yourname/yourrepository.git
 
 + 后续则可以在 test 分支上进行代码编写
    
-   切换到 master 分支
-   ```
-   $ git checkout master
-   ```
-
    切换到 test 分支
    ```
    $ git checkout test
@@ -68,7 +64,7 @@ $ git clone git@github.com:yourname/yourrepository.git
 
    在仓库目录内，鼠标右键 TortoiseGit-->Merge，选择从需要合并的源 Branch 
 
-   ![Merge][src/image/windows/basicop_merge.bmp]
+   ![Merge](src/image/windows/basicop_merge.bmp)
 
    存在冲突时，鼠标右键冲突文件 TortoiseGit-->edit conflicts
 

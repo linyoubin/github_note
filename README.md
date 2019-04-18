@@ -11,7 +11,7 @@
 ### 工具安装配置 ###
 + [说明](src/document/windows/README.md)
 + [安装配置 git](src/document/windows/tool/git.md)
-+ [安装配置 git](src/document/windows/tool/tortoisegit.md)
++ [安装配置 tortoisegit](src/document/windows/tool/tortoisegit.md)
 
 ### 使用说明 ###
 + [基本操作说明](src/document/windows/basicop.md)
