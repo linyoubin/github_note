@@ -18,7 +18,7 @@
    >
    >-s 告诉 Git 该 Subversion 仓库遵循了基本的分支和标签命名法则，也就是标准布局。如果你的主干( trunk，相当于非分布式版本控制里的 master 分支，代表开发的主线），分支( branches )或者标签( tags )以不同的方式命名，则应做出相应改变。
    >
-   >-s 参数其实是-T trunk -b branches -t tags 的缩写，这些参数告诉 git 这些文件夹与git分支、tag、master的对应关系。
+   >-s 参数其实是-T trunk -b branches -t tags 的缩写，这些参数告诉 git 这些文件夹与 git 分支，tag，master 的对应关系。
    >
    >--prefix=svn/ 给 svn 的所有 remote 名称增加了一个前缀 svn，这样比较统一，而且可以防止 warning: refname 'xxx' is ambiguous.
 
@@ -46,9 +46,16 @@
    $ git checkout -b story1
    ```
 
-   切换到本地 story1 分支，修改代码
+   指定在 story1 分支中的特定版本（如果是基于最新的则不需要）
    ```
    $ git checkout story1
+   $ git reset --hard e377f60e28c8b84158
+   ```
+
+   在本地 story1 分支中修改、提交代码
+   ```
+   $ git checkout story1
+   $ //提交代码使用 TortoiseGit 提交代码，方便查看修改记录
    ```
    
    验证通过后将改动合并到 sequoiadb_2.8 分支
