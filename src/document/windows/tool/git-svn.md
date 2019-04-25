@@ -22,7 +22,7 @@
    >
    >--prefix=svn/ 给 svn 的所有 remote 名称增加了一个前缀 svn，这样比较统一，而且可以防止 warning: refname 'xxx' is ambiguous.
 
-## 工作流程 ##
+## 主要工作流程 ##
 
 + 查看所有分支
 
@@ -108,4 +108,41 @@
     $ git svn fetch svn/branch1
     $ git checkout -b branch1 svn/branch1
     ```
+
+## 提交时忽略文件 ##
+
+代码中编译后，会存在大量临时生成的文件，而这些文件是我们不想提交的。为了避免每次提交时要处理不必要的修改文件，可以将此种类型的文件直接忽略掉。
+
+### 忽略版本中不存在的文件 ###
+
++ 生成忽略文件（在项目根目录执行命令，如果文件已存在则跳过此步骤）
+   ```
+   $ touch .gitignore
+   ```
+
++ 打开文件 .gitignore , 将确认不需要提交的文件填入该文件中。样例如下：
+   ```
+   $ cat .gitignore
+   /bin/
+   /build/
+   /.gitignore
+   /code/auto_gen.hpp
+   ```
+
+### 忽略已经在版本中的文件 ###
+
+当文件已经存在的版本中，但是想忽略这些文件的修改时，可以采用此方法。如果 version.hpp 里面填了版本的公共定义，每次编译后会根据 git 版本自动更新版本的信息。这种文件每个人编译时都会修改，但是不应该提交到版本中。
+
++ 忽略已经在版本中的文件
+   ```
+   git update-index --assume-unchanged version.hpp
+   ```
+
+
+   取消该忽略则使用命令，可以重新跟踪该文件的提交状态
+   ```
+   git update-index --no-assume-unchanged version.hpp
+   ```
+
+
 
