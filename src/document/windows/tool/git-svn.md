@@ -67,7 +67,7 @@
 
    提交代码到 svn
    ``` shell
-   $ git svn dcommit -m "commit log"
+   $ git svn dcommit -m "commit log" //提交到正式 svn 中建议使用 TortoiseGit 提交代码，方便查看修改记录
    ```
 
    story1 分支不需要后，删除该分支
@@ -108,31 +108,6 @@
     $ git svn fetch svn/branch1
     $ git checkout -b branch1 svn/branch1
     ```
-
-## 提交时忽略文件 ##
-
-代码中编译后，会存在大量临时生成的文件，而这些文件是我们不想提交的。为了避免每次提交时要处理不必要的修改文件，可以将此种类型的文件直接忽略掉。
-
-### 忽略版本中不存在的文件 ###
-
-+ 生成忽略文件（在项目根目录执行命令，如果文件已存在则跳过此步骤）
-   ```
-   $ touch .gitignore
-   ```
-
-+ 打开文件 .gitignore , 将确认不需要提交的文件填入该文件中。样例如下：
-   ```
-   $ cat .gitignore
-   /bin/
-   /build/
-   /.gitignore
-   /code/auto_gen.hpp
-   ```
-
->**Note:**
->
-> .gitignore中的文件在切换不同分支时，其它分支也会一直存在。
->
 
 ### 忽略已经在版本中的文件 ###
 
