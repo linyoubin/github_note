@@ -140,14 +140,29 @@
 
 + 忽略已经在版本中的文件
    ```
-   git update-index --assume-unchanged version.hpp
+   $ git update-index --assume-unchanged version.hpp
    ```
 
 
    取消该忽略则使用命令，可以重新跟踪该文件的提交状态
    ```
-   git update-index --no-assume-unchanged version.hpp
+   $ git update-index --no-assume-unchanged version.hpp
    ```
 
++ 列取已经在版本中忽略的文件
+   ```
+   $ git ls-files -v | grep '^[[:lower:]]'
+   h version.hpp
+   ```
 
+   该命令太冗长，可以做成别名更方便使用
+   ```
+   $ git config --global alias.ignored '!git ls-files -v | grep "^[[:lower:]]"'
+   ```
+
+   使用别名 git ignored 查看
+   ```
+   $ git ignored
+   h version.hpp
+   ```
 
