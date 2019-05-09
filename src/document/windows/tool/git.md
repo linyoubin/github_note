@@ -1,6 +1,16 @@
 # Git #
 
+## 下载地址 ##
+
+官网下载地址：https://git-scm.com
+
+腾讯下载地址：https://pc.qq.com/detail/13/detail_22693.html
+
+腾讯的链接比较快，官网的速度太慢。
+
 ## 安装 ##
+
+windows 下双击可执行程序安装即可。
 
 ## 配置免密操作 ##
 
