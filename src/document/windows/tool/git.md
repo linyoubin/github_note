@@ -10,7 +10,8 @@
 
 ## 安装 ##
 
-windows 下双击可执行程序安装即可。
+windows 下双击可执行程序安装即可。注意安装时选择换行符的规则：
+![Line](../../../image/windows/tool/git_install_line.png)
 
 ## 配置免密操作 ##
 

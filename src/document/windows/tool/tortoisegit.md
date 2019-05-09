@@ -1,6 +1,12 @@
 # TortoiseGit #
 
+## 下载地址 ##
+
+官网下载地址：https://tortoisegit.org/download/
+
 ## 安装 ##
+
+双击可执行程序，一路 next 即可。
 
 ## 配置免密操作 ##
 + 从开始菜单 TortoiseGit 文件夹下打开 puttyGen 
