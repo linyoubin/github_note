@@ -54,9 +54,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ### git add ###
 建议在 TortoiseGit 中添加并提交。
 
-+ 如果发现有需要忽略的非版本中的文件，可以加入 .gitignore 中，参照[忽略版本中不存在的文件](git_conf.md#忽略版本中不存在的文件)
++ 如果发现有需要忽略的非版本中的文件，可以加入 .gitignore 中，参照[忽略版本中不存在的文件](tool/git.md#忽略版本中不存在的文件)
 
-+ 如果要恢复不需要修改的文件，可以加入到 .dirtylist 中，参照[恢复不想提交的版本文件](git_conf.md#恢复不想提交的版本文件)
++ 如果要恢复不需要修改的文件，可以加入到 .dirtylist 中，参照[恢复不想提交的版本文件](tool/git.md#恢复不想提交的版本文件)
 
 ### 基本指定版本开发新功能 ###
 指定基于某个版本进行功能开发。
