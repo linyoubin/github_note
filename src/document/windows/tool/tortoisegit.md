@@ -27,3 +27,9 @@
 + 验证是否配置成功
 
   提交一次 github 修改做为验证步骤即可。具体操作参见[基本操作](../basicop.md)
+
+  ## 配置 log 显示条数 ##
+
+  默认情况下会显示所有提交记录，当提交记录太多时 show log 会非常慢。因此可以调整最大显示的提交次数即可。（svn默认是300）
+  
+  ![log_conf](../../../image/windows/tool/tortoisegit_log_conf.jpg)
