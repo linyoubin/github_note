@@ -1,12 +1,23 @@
 # 基本操作 #
 
+## 官方仓库和私人仓库 ##
+在 github.com 上有官方仓库，也有私人仓库。
+
+官方仓库一般为该项目的第一个仓库，是由官方人员负责维护更新的。
+私人仓库是以个人帐户登陆 github.com 后，从官方仓库 fork 出来的项目。
+
+例如有一个官方仓库为： https://github.com/996icu/996.ICU （其仓库地址为：git@github.com:996icu/996.ICU.git）
+![offical](../../image/windows/basicop_offical.jpg)
+
+在该页面上点击 fork，将该项目 fork 到自己的私人仓库中。这样该项目就会保存一个私人仓库在自己的个人 github 上。
+
 ## git bash ##
 [git 安装](tool/git.md)之后自带了 git bash。 git bash 是一个类似于 Linux shell 的命令行窗口。可以方便地使用 git 命令进行项目的 clone, commit 等操作。
 
 在文件浏览窗口鼠标右键-->Git Bash Here， 打开 git bash。以下命令行命令没有特殊说明的，均是在 git bash 中的操作。
 
 ### git clone ###
-拷贝一个 Git 远程仓库到本地，让自己能够查看、修改、提交该项目。
+拷贝一个 Git 远程私人仓库到本地，让自己能够查看、修改、提交该项目。
 
 ``` shell
 $ git clone git@github.com:yourname/yourrepository.git
@@ -14,10 +25,28 @@ $ git clone git@github.com:yourname/yourrepository.git
 
 >**Note:**
 >
-> git@github.com:yourname/yourrepository.git 为你在 github 上拥有的仓库路径。其中 yourname 为用户名，yourrepository 为仓库名
+> git@github.com:yourname/yourrepository.git 为你在 github 上拥有的私人仓库路径。其中 yourname 为用户名，yourrepository 为仓库名
 >
 > 该命令会在当前目录下创建 git 本地仓库，目录名称为仓库名
 >
+
+### git remote ###
+用于查看、操作远程仓库的命令
+
+查看远程仓库
+```
+git remote -vv 
+```
+
+添加官方仓库，并命名为 offical。方便随时更新官方仓库的修改到私人仓库中。
+
+```
+git remote add official git@github.com:official/officalrepository.git
+```
+
+>**Note:**
+>
+> git@github.com:official/officalrepository.git 为官方仓库的路径。
 
 ### git status ###
 用于查看当前本地仓库的提交状态。 可以显示未提交和没有版本监控的文件
@@ -52,11 +81,45 @@ no changes added to commit (use "git add" and/or "git commit -a")
 >还有一是没有在版本中的新文件：aa.txt
 
 ### git add ###
-建议在 TortoiseGit 中添加并提交。
 
-+ 如果发现有需要忽略的非版本中的文件，可以加入 .gitignore 中，参照[忽略版本中不存在的文件](tool/git.md#忽略版本中不存在的文件)
+将修改保存到暂存区，等待 commit。
+   ``` shell
+   git add README.md src/document/windows/basicop.md aa.txt
+   ```
 
-+ 如果要恢复不需要修改的文件，可以加入到 .dirtylist 中，参照[恢复不想提交的版本文件](tool/git.md#恢复不想提交的版本文件)
+也可以执行以下命令将所有修改和新加的文件全部加入暂存区
+   ``` shell
+   git add .
+   ```
+
+> **Note:** 如果不执行 git add, 直接执行 git commit 修改文件是不会提交到本地仓库的。
+>
+
+### git commit ###
+
+将暂存区的文件提交到本地仓库
+``` shell
+git commit
+```
+
+### git pull ###
+
+将远程仓库中的修改同步并 merge 到本地仓库中
+```
+git pull offical master
+```
+
+git 会自动合并代码。如果有冲突时，需要自己解决冲突并提交。
+
+### git push ###
+
+将本地仓库中的修改推送到远程仓库中
+```
+git push origin master
+```
+
+>**Note:** 一般使用 git push 将修改推送到自己的远程私人仓库，再在页面上使用 pull request 将私人仓库的修改推送到官方仓库
+>
 
 ### 基本指定版本开发新功能 ###
 指定基于某个版本进行功能开发。
