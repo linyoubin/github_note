@@ -11,7 +11,9 @@
 ## 配置免密操作 ##
 + 从开始菜单 TortoiseGit 文件夹下打开 puttyGen 
 
-   在 puttyGen 中点击 Generate 生成公钥私钥
+   在 puttyGen 中点击 Generate 生成公钥私钥。
+   >**Note:** 生成过程中需要不断移动并点击鼠标以辅助生成足够的随机值。
+   > 
 
 + 将公钥填入 github 配置中
   
@@ -31,5 +33,5 @@
   ## 配置 log 显示条数 ##
 
   默认情况下会显示所有提交记录，当提交记录太多时 show log 会非常慢。因此可以调整最大显示的提交次数即可。（svn默认是300）
-  
+
   ![log_conf](../../../image/windows/tool/tortoisegit_log_conf.jpg)
