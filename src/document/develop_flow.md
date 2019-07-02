@@ -35,7 +35,7 @@ show log
 
 选择需要合并的多个 commit
 
-选择combine to one commit
+右键选择combine to one commit
 
 ![combine](../image/combine_to_one_commit.jpg)
 
@@ -113,6 +113,9 @@ start rebase
 ![rebase](../image/git_rebase.jpg)
 
 期间可能需要解决冲突，冲突解决完之后，继续 rebase
+
+>**Note:** 如果 master 分支没有修改时，会提示不需要 rebase。此时可以直接结束
+>
 
 ### 使用 Git ###
 
