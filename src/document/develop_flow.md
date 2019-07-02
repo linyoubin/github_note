@@ -32,7 +32,9 @@ git checkout -b develop origin/master
 
 ### TortoiseGit 操作 ###
 show log 
+
 选择需要合并的多个 commit
+
 选择combine to one commit
 
 ![combine](../image/combine_to_one_commit.jpg)
@@ -101,9 +103,13 @@ git pull offical master
 
 ### 使用 TortoiseGit ###
 checkout develop
+
 rebase
+
 右边选择 master 本地分支
+
 start rebase
+
 ![rebase](../image/git_rebase.jpg)
 
 期间可能需要解决冲突，冲突解决完之后，继续 rebase
