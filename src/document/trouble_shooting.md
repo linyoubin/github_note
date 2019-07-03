@@ -1,7 +1,7 @@
 # 常见问题 #
 ## 回退 git pull 操作 ##
 ### 问题描述 ###
-在本地分支多个 commit 之后，错误执行 git pull/merge 同步了官方最新代码，会扰乱自身的 commit 时间线，与官方的提交穿插在一直，导致无法将本地的多次 commit 合并成一个 commit.
+在本地分支多个 commit 之后，错误执行 git pull/merge 同步了官方最新代码，会扰乱自身的 commit 时间线，与官方的提交穿插在一起，导致无法将本地的多次 commit 合并成一个 commit.
 
 - git pull 之前本地分支的多个 commit 是连续的
    ``` shell

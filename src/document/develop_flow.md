@@ -35,7 +35,7 @@ git checkout -b develop origin/master
 ```
 
 ## 修改代码 ##
-修改代码，并且有多次 commit 记录。 期间不能 git pull 官方或个人仓库
+修改代码，并且有多次 commit 记录。 期间不能 git pull 官方或个人仓库。误操作 git pull 解决方案请参考[rollback_git_pull](./trouble_shooting.md#回退gitpull操作)
 
 ## 合并开发分支多个 commit ##
 可以任意选择以下两种方式中的一种进行操作
