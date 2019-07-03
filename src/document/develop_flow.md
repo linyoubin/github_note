@@ -1,10 +1,14 @@
 
 # 开发流程 #
+以 github.com 上的 gitignore 项目为例，讲解开发流程。首先应该在 https://github.com/github/gitignore 上 fork 该项目到自己私人仓库下。
 
-## 克隆私人仓库 ##
+## 从远程私人仓库克隆到本地仓库 ##
 ``` shell
 git clone git@github.com:linyoubin/gitignore.git
 ```
+
+在项目首页上获取仓库地址
+![get_repo_address](../image/get_repo_address.jpg)
 
 ## 添加远程官方仓库 ##
 ``` shell
