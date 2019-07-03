@@ -4,7 +4,7 @@
 - 首先需要在 https://github.com/github/gitignore 上 fork 该项目到自己私人仓库下。
 - 在本地仓库开发完成，最终提交到官方仓库为一次完整的流程
 - 本地仓库无法直接推送到官方仓库，需要先推送到私人仓库，然后在远程私人仓库中向官方仓库发起 pull request 才能合入官方仓库
-- 私人仓库的 master 分支和本地仓库的 master 分支仅作为
+- 私人仓库的 master 分支和本地仓库的 master 分支仅作为更新官方最新代码使用，不在上述分支做其他操作。需要在本地开发或修改时需要新建分支进行操作。
 
 ## 从远程私人仓库克隆到本地仓库 ##
 ``` shell
@@ -144,7 +144,7 @@ git push origin develop
 ```
 
 ## 从远程 develop分支请求 pull request 到远程官方仓库 ##
-在[官方项目](https://github.com/github/gitignore/pulls)中发起 pull request
+在[官方项目](https://github.com/github/gitignore/pulls)中发起 pull request。源选择私人仓库的 develop 分支，目的选择官方仓库的 master 分支
 
 ![pull_request](../image/pull_request.jpg)
 
