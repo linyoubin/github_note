@@ -143,5 +143,3 @@ git checkout master
 git branch -D develop
 git push origin --delete develop
 ```
-
-

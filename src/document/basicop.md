@@ -7,12 +7,12 @@
 私人仓库是以个人帐户登陆 github.com 后，从官方仓库 fork 出来的项目。
 
 例如有一个官方仓库为： https://github.com/996icu/996.ICU （其仓库地址为：git@github.com:996icu/996.ICU.git）
-![offical](../../image/windows/basicop_offical.jpg)
+![offical](../image/basicop_offical.jpg)
 
 在该页面上点击 fork，将该项目 fork 到自己的私人仓库中。这样该项目就会保存一个私人仓库在自己的个人 github 上。
 
 ## git bash ##
-[git 安装](tool/git.md)之后自带了 git bash。 git bash 是一个类似于 Linux shell 的命令行窗口。可以方便地使用 git 命令进行项目的 clone, commit 等操作。
+[git 安装](windows/tool/git.md)之后自带了 git bash。 git bash 是一个类似于 Linux shell 的命令行窗口。可以方便地使用 git 命令进行项目的 clone, commit 等操作。
 
 在文件浏览窗口鼠标右键-->Git Bash Here， 打开 git bash。以下命令行命令没有特殊说明的，均是在 git bash 中的操作。
 
@@ -64,7 +64,7 @@ Changes not staged for commit:
   (use "git checkout -- <file>..." to discard changes in working directory)
 
         modified:   README.md
-        modified:   src/document/windows/basicop.md
+        modified:   src/document/basicop.md
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -76,7 +76,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 >**Notes:**
 >
->在本例中，有两个版本中的文件内容被修改了：README.md 和 src/document/windows/basicop.md
+>在本例中，有两个版本中的文件内容被修改了：README.md 和 src/document/basicop.md
 >
 >还有一是没有在版本中的新文件：aa.txt
 
@@ -84,7 +84,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 将修改保存到暂存区，等待 commit。
    ``` shell
-   git add README.md src/document/windows/basicop.md aa.txt
+   git add README.md src/document/basicop.md aa.txt
    ```
 
 也可以执行以下命令将所有修改和新加的文件全部加入暂存区
@@ -161,7 +161,7 @@ git push origin master
 
    在仓库目录内，鼠标右键 TortoiseGit-->Merge，选择从需要合并的源 Branch 
 
-   ![Merge](../../image/windows/basicop_merge.bmp)
+   ![Merge](../image/basicop_merge.bmp)
 
    存在冲突时，鼠标右键冲突文件 TortoiseGit-->edit conflicts
 
