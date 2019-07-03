@@ -1,20 +1,26 @@
 
 # 开发流程 #
-以 github.com 上的 gitignore 项目为例，讲解开发流程。首先应该在 https://github.com/github/gitignore 上 fork 该项目到自己私人仓库下。
+以 github.com 上的 gitignore 项目为例，讲解开发流程。
+- 首先需要在 https://github.com/github/gitignore 上 fork 该项目到自己私人仓库下。
+- 在本地仓库开发完成，最终提交到官方仓库为一次完整的流程
+- 本地仓库无法直接推送到官方仓库，需要先推送到私人仓库，然后在远程私人仓库中向官方仓库发起 pull request 才能合入官方仓库
+- 私人仓库的 master 分支和本地仓库的 master 分支仅作为
 
 ## 从远程私人仓库克隆到本地仓库 ##
 ``` shell
 git clone git@github.com:linyoubin/gitignore.git
 ```
 
-在项目首页上获取仓库地址
+仓库地址在项目首页上获取
 ![get_repo_address](../image/get_repo_address.jpg)
 
 ## 添加远程官方仓库 ##
+添加官方仓库
 ``` shell
 git remote add offical git@github.com:github/gitignore.git
 ```
 
+查看所有远程仓库地址
 ``` shell
 git remote -vv
 offical git@github.com:github/gitignore.git (fetch)
@@ -74,7 +80,8 @@ git rebase -i 50e42aa1064d004a5c99eaa72a2d8054a0d8de55
 ```
 
 编辑选择第一个 pick，第二个 s 进行合并
-编辑 log
+
+合并编辑新的提交日志 log
 
 ``` shell
 git log
@@ -93,8 +100,6 @@ Date:   Thu Jun 27 19:49:08 2019 +0400
 ```
 
 可以看到之前的两次提交被合并成一次提交
-
-combine to one commit
 
 ## 更新官方最新代码到本地 master ##
 ``` shell
@@ -139,7 +144,9 @@ git push origin develop
 ```
 
 ## 从远程 develop分支请求 pull request 到远程官方仓库 ##
-在网页上发起 pull request
+在[官方项目](https://github.com/github/gitignore/pulls)中发起 pull request
+
+![pull_request](../image/pull_request.jpg)
 
 ## 官方库同意并提交 pull request 之后删除远程分支 ##
 ``` shell
