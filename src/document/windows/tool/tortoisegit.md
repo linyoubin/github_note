@@ -30,8 +30,23 @@
 
   提交一次 github 修改做为验证步骤即可。具体操作参见[基本操作](../../basicop.md)
 
-  ## 配置 log 显示条数 ##
+  ## 推荐配置 ##
+  ### 配置log显示条数 ###
 
   默认情况下会显示所有提交记录，当提交记录太多时 show log 会非常慢。因此可以调整最大显示的提交次数即可。（svn默认是300）
 
   ![log_conf](../../../image/windows/tool/tortoisegit_log_conf.jpg)
+
+  ### 常用命令加入右键菜单 ###
+  将经常使用的命令，如 show log, pull 等加入右键菜单，提高效率
+
+  ![quick_cmd_conf](../../../image/windows/tool/tortoisegit_quick_cmd_conf.jpg)
+
+  效果如下
+
+  ![quick_cmd_view](../../../image/windows/tool/tortoisegit_quick_cmd_view.jpg)
+  
+  ### 使用beyondcompare作为比较工具 ###
+  setting->diff viewer
+  setting->diff viewer->merge tool
+  修改为 beyongcompare 的执行程序路径
