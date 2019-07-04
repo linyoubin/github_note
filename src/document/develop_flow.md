@@ -29,7 +29,7 @@ origin  git@github.com:linyoubin/gitignore.git (fetch)
 origin  git@github.com:linyoubin/gitignore.git (push)
 ```
 
-## 新建本地开发分支 develop ##
+## 新建本地开发分支develop ##
 ``` shell
 git checkout -b develop origin/master
 ```
@@ -37,10 +37,10 @@ git checkout -b develop origin/master
 ## 修改代码 ##
 修改代码，并且有多次 commit 记录。 期间不能 git pull 官方或个人仓库。误操作 git pull 解决方案请参考[rollback_git_pull](./trouble_shooting.md#回退gitpull操作)
 
-## 合并开发分支多个 commit ##
+## 合并开发分支多个commit ##
 可以任意选择以下两种方式中的一种进行操作
 
-### TortoiseGit 操作 ###
+### TortoiseGit操作 ###
 show log 
 
 选择需要合并的多个 commit
@@ -49,7 +49,7 @@ show log
 
 ![combine](../image/combine_to_one_commit.jpg)
 
-### Git 操作 ###
+### Git操作 ###
 
 查看本分支提交记录
 ``` shell
@@ -101,16 +101,16 @@ Date:   Thu Jun 27 19:49:08 2019 +0400
 
 可以看到之前的两次提交被合并成一次提交
 
-## 更新官方最新代码到本地 master ##
+## 更新官方最新代码到本地master ##
 ``` shell
 git checkout master
 git pull offical master
 ```
 
-## 合并本地 master 分支到本地 develop 分支 ##
+## 合并本地master分支到本地develop分支 ##
 可以任意选择以下两种方式中的一种进行操作
 
-### 使用 TortoiseGit ###
+### 使用TortoiseGit ###
 checkout develop
 
 rebase
@@ -126,7 +126,7 @@ start rebase
 >**Note:** 如果 master 分支没有修改时，会提示不需要 rebase。此时可以直接结束
 >
 
-### 使用 Git ###
+### 使用Git ###
 
 ``` shell
 git checkout develop
@@ -138,17 +138,17 @@ git rebase master
 git rebase --continue
 ```
 
-## 推送本地 develop 分支为远程 develop 分支 ##
+## 推送本地develop分支到远程develop分支 ##
 ``` shell
 git push origin develop
 ```
 
-## 从远程 develop分支请求 pull request 到远程官方仓库 ##
+## 从远程develop分支请求合并到远程官方仓库 ##
 在[官方项目](https://github.com/github/gitignore/pulls)中发起 pull request。源选择私人仓库的 develop 分支，目的选择官方仓库的 master 分支
 
 ![pull_request](../image/pull_request.jpg)
 
-## 官方库同意并提交 pull request 之后删除远程分支 ##
+## 官方库同意并提交之后删除远程分支 ##
 ``` shell
 git checkout master
 git branch -D develop

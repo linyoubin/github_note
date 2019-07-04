@@ -25,7 +25,7 @@
         init
     ```
 
-- git pull 之后会扰乱本地分支的 commit 日志，导致无法合并多次 commit
+- git pull 之后会扰乱本地分支的 commit 日志
     ``` shell
     $git log
     commit 4af43367295a8f437a00b594327eaecc9e6e4826 (HEAD -> develop)
@@ -54,7 +54,7 @@
         develop1
 
     ```
-    中间穿插了另一个 master 分支的提交，还多了一个 merge commit
+    官方commit(d7323f00c18e55f171aa9332dbda7cb6830e339a)穿插在本地 commit 之间，导致无法直接合并本地的多个 commit。最后分支记录上还多了一个 merge commit 。
 
 ### 解决方法 ###
 可以通过命令 git reflog 查看 git pull 操作的日志，结合 git reset 将本地仓库恢复到 git pull 之前的提交状态。
@@ -103,3 +103,4 @@
         init
     ```
 
+    >**Note:** 正常开发流程请参考[开发流程](develop_flow.md#合并开发分支多个commit)
