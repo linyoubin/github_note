@@ -154,3 +154,73 @@ git checkout master
 git branch -D develop
 git push origin --delete develop
 ```
+
+## 其他说明 ##
+
+### 自动同步远程仓库 ###
+脚本 sync_from_offical.sh 可以从官方仓库中拉取最新代码到本地仓库，再推送到远程私人仓库。
+
+- GIT_HOME
+``` shell
+$cat sync_from_offical.sh
+GIT_HOME=/d/personal/github/gitignore
+LOCAL_BRANCH=master
+OFFICAL_BRANCH="offical master"
+ORIGIN_BRANCH="origin master"
+
+DRY_RUN=0
+
+function display_help()
+{
+    echo "$0 --help | -h"
+    echo "$0 [--dry_run]"
+    echo ""
+    echo " --dry_run       : just print command, do not run it"
+    echo ""
+
+    exit $1
+}
+
+function execCMD()
+{
+    if [ $# -ne 1 ]; then
+        echo "param is not 1: $*"
+	exit -1
+    fi
+
+    echo "$ $1"
+
+    if [ $DRY_RUN -eq 1 ]; then
+        return
+    fi
+
+    $1
+
+    ret=$?
+    if [ 0 -ne $ret ]; then
+        echo "Failed to exe cmd[$1], rc=$ret"
+	exit -1
+    fi
+
+    echo ""
+}
+
+#read param
+while [ "$1" != "" ]; do
+    case $1 in
+        --dry_run )         DRY_RUN=1
+		            ;;
+	--help | -h )       display_help 0
+		            ;;
+	* )                 display_help 1
+
+    esac
+    shift
+done
+
+execCMD "cd $GIT_HOME"
+execCMD "git checkout $LOCAL_BRANCH"
+execCMD "git pull $OFFICAL_BRANCH"
+execCMD "git push $ORIGIN_BRANCH"
+
+```
