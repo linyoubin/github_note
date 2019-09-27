@@ -144,34 +144,3 @@ git push origin master
    ``` shell
    $ git reset --hard 828c977682ecdf45eb7eec0721183811752eecfe
    ```
-
-+ 后续则可以在 test 分支上进行代码编写
-   
-   切换到 test 分支
-   ```
-   $ git checkout test
-   ```
-
-+ test 分支代码编写完毕后，执行合并提交
-
-   切换回 master 分支
-   ```
-   $ git checkout master
-   ```
-
-   在仓库目录内，鼠标右键 TortoiseGit-->Merge，选择从需要合并的源 Branch 
-
-   ![Merge](../image/basicop_merge.bmp)
-
-   存在冲突时，鼠标右键冲突文件 TortoiseGit-->edit conflicts
-
-+ 合并完代码之后，提交到远程仓库
-
-  提交到远程仓库的操作建议在 TortoiseGit 下进行。使用该工具可以在 Windows 下以视图形式复查修改的代码，还有一些没必要提交的文件也可以识别出来。
-
-  同时也可以先将本地多次 commit 合并成一个 commit ，再做为一次提交 push 到远程仓库，避免远程仓库有过多的无效 commit 日志。
-
-  >**Notes:**
-  >
-  >只能合并自己本地分支的 commit，否则会造成无法 push 远程仓库的问题
-  >
