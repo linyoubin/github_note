@@ -67,3 +67,9 @@ git config --global core.autocrlf false
 git config --global user.name "linyoubin"
 git config --global user.email "linyoubin@sequoiadb.com"
 ```
+
+3. 当 git log 无法分页显示时，设置 pager(需要重启客户端才能生效)
+
+``` shell
+git config --global core.pager 'C:/cygwin64/bin/less.exe -R'
+```
