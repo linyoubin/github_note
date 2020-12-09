@@ -168,9 +168,15 @@ git push origin develop
 
 ## 官方库同意并提交之后删除远程分支 ##
 
+删除本地分支
 ``` shell
 git checkout master
 git branch -D develop
+git branch -D origin/develop -r
+```
+
+删除远程分支
+```
 git push origin --delete develop
 ```
 
